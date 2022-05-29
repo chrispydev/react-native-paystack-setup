@@ -2,8 +2,8 @@ import React from "react";
 import { View, SafeAreaView, StyleSheet, Text } from "react-native";
 import { Paystack } from "react-native-paystack-webview";
 // import { Alert } from "react-native";
-import COLORS from "../../consts/colors";
-import Icon from "react-native-vector-icons/MaterialIcons";
+// import COLORS from "../../consts/colors";
+// import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default function PaymentScreen({ navigation }) {
   return (
@@ -16,9 +16,11 @@ export default function PaymentScreen({ navigation }) {
         activityIndicatorColor="green"
         onCancel={(e) => {
           // handle response here
+          navigation.navigate("BoardScreen");
         }}
         onSuccess={(res) => {
           // handle response here
+          navigation.navigate("HomeScreen");
         }}
         autoStart={true}
       />
