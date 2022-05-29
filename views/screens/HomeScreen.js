@@ -60,7 +60,7 @@ const HomeScreen = ({ navigation }) => {
             }}
           >
             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
-              ${product.price}
+              GHC{product.price}
             </Text>
             <View style={style.addToCartBtn}>
               <TouchableOpacity onPress={() => addToBasket(product)}>

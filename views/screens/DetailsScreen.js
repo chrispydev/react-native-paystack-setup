@@ -5,21 +5,23 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 import { useStateValue } from '../../provider/StateProvider';
 import { SecondaryButton } from '../components/Button';
+import products from '../../consts/products';
 
 const DetailsScreen = ({ navigation, route }) => {
   const item = route.params;
   const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = (product) => {
-    dispatch({
-      type: 'ADD_TO_BASKET',
-      item: {
-        id: product.id,
-        image: product.image,
-        title: product.name,
-        price: product.price,
-      },
-    });
+    console.log('products');
+    // dispatch({
+    //   type: 'ADD_TO_BASKET',
+    //   item: {
+    //     id: product.id,
+    //     image: product.image,
+    //     title: product.name,
+    //     price: product.price,
+    //   },
+    // });
   };
 
   return (
@@ -36,7 +38,7 @@ const DetailsScreen = ({ navigation, route }) => {
             height: 280,
           }}
         >
-          <Image source={item.image} style={{ height: 220, width: 220 }} />
+          <Image source={products.image} style={{ height: 220, width: 220 }} />
         </View>
         <View style={style.details}>
           <View
@@ -49,7 +51,7 @@ const DetailsScreen = ({ navigation, route }) => {
             <Text
               style={{ fontSize: 25, fontWeight: 'bold', color: COLORS.white }}
             >
-              {item.name}
+              {products.name}
             </Text>
             <View style={style.iconContainer}>
               <Icon name='favorite-border' color={COLORS.primary} size={25} />

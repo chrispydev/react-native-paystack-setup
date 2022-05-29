@@ -27,7 +27,7 @@ const CartScreen = ({ navigation }) => {
             {basket.name}
           </Text>
           <Text style={{ fontSize: 17, fontWeight: 'bold' }}>
-            ${basket.price}
+            GHC{basket.price}
           </Text>
         </View>
         <View style={{ marginRight: 20, alignItems: 'center' }}>
@@ -70,7 +70,9 @@ const CartScreen = ({ navigation }) => {
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Total Price
                   </Text>
-                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>$200</Text>
+                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+                    GHC200
+                  </Text>
                 </View>
                 <View style={{ marginHorizontal: 30 }}>
                   <PrimaryButton
